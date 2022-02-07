@@ -2,7 +2,7 @@ import './style.scss';
 
 let bodi = document.querySelector('body');
 
-function addMobileNav(arrayofitems){
+export default function addMobileNav(arrayofitems){
     let outWrapper = document.createElement('div');
     outWrapper.classList.add('outside-wrapper');
     let leftSide = document.createElement('div');
@@ -40,4 +40,4 @@ function addMobileNav(arrayofitems){
     })
 }
 
-addMobileNav(['one', 'one', 'one', 'one', 'one', 'one', 'one', 'one']);
+//addMobileNav(['one', 'one', 'one', 'one', 'one', 'one', 'one', 'one']);
