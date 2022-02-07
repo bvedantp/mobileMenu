@@ -1,0 +1,99 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outside-wrapper {
+    opacity: 0.4;
+    position: fixed; 
+    bottom:0%;
+    width:90%; 
+    background-color: #a7a7a700; 
+    display: flex;
+    justify-content: center;
+    gap: 20vw;
+    padding: 8px;
+    margin: 4px;
+    margin-bottom: 12px;
+    border-radius: 28px;
+    backdrop-filter: blur(4px);
+    transform: scale(0.8);
+    transition: opacity 300ms ease-out;
+    transition: transform 300ms cubic-bezier(0, -1.86, 0.15, 3.27);
+}
+
+#menu-launcher {
+    position: absolute;
+    padding: 6px 18px;
+    top: -16px;
+    background-color: red;
+    color: whitesmoke;
+    font-size: xx-large;
+    border: 1px solid red;
+    border-radius: 50%;
+    transition: transform 300ms ease-out;
+    transform: rotate(0deg);
+}
+
+.left-side {
+    width: 100vw;
+    transform: scaleX(0);
+    text-align: right;
+   // overflow: auto; //these both lines give
+    white-space: nowrap; //menu scrolling
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.left-side::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.right-side {
+    width: 100vw;
+    transform: scaleX(0);
+   // overflow: auto; //these both lines give
+    white-space: nowrap; //menu scrolling
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+}
+
+.right-side::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    margin: 3px;
+}
+
+.outside-wrapper.opacity-red {
+    border: 2px solid red;
+    opacity: 1;
+    background-color: red;
+    transform: scaleX(1);
+}
+
+.left-side.animate {
+    transform: scaleX(1);
+}
+
+.right-side.animate {
+    transform: scaleX(1);
+}
+
+#menu-launcher.rotate {
+    transform: rotate(135deg);
+    box-shadow: 1px 1px 13px 2px black;
+}
+//on click make a class which adds bgcolor red
+//to wrapper and border
+//add another class to left/right-side that
+//adds scale(1) on click
+//add transition on wrapper and l/r-side
+//rotate button 120 degree
